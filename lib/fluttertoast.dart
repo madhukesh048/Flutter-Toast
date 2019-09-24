@@ -17,7 +17,7 @@ class _FlutterToastState extends State<FlutterToast> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FlatButton(
+            RaisedButton(
               onPressed: () => showToast("Show Short Toast"),
               child: Text(
                 'Show Short Toast',
@@ -25,18 +25,18 @@ class _FlutterToastState extends State<FlutterToast> {
               ),
               color: Colors.blue,
             ),
-            FlatButton(
-              onPressed: () => showToast("Show Long Toast",
-                  duration: Toast.LENGTH_LONG),
+            RaisedButton(
+              onPressed: () =>
+                  showToast("Show Long Toast", duration: Toast.LENGTH_LONG),
               child: Text(
                 'Show Long Toast',
                 style: TextStyle(color: Colors.white),
               ),
               color: Colors.blue,
             ),
-             FlatButton(
+            RaisedButton(
               onPressed: () => showToast("Show Toast at Bottom",
-                  duration: Toast.LENGTH_LONG,gravity: Toast.BOTTOM),
+                  duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM),
               child: Text(
                 'Show Toast at Bottom',
                 style: TextStyle(color: Colors.white),
