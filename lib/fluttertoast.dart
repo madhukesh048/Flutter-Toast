@@ -13,9 +13,9 @@ class _FlutterToastState extends State<FlutterToast> {
       appBar: AppBar(
         title: Text("Flutter Toast"),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 50),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
               onPressed: () => showToast("Show Short Toast"),
@@ -50,6 +50,6 @@ class _FlutterToastState extends State<FlutterToast> {
   }
 
   void showToast(String msg, {int duration, int gravity}) {
-    Toast.show(msg, context, duration: duration, gravity: gravity);
+    Toast.show(msg, context, duration: duration, gravity: gravity,backgroundColor: Colors.red,backgroundRadius: 10);
   }
 }
